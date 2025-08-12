@@ -368,6 +368,7 @@
   </section>
 
   <!-- Enroll / Contact Form -->
+  <!-- Enroll / Contact Form -->
   <section class="py-5" id="enroll">
     <div class="container">
       <div class="row g-4 align-items-start">
@@ -381,11 +382,15 @@
             <a href="https://wa.me/919935058417" target="_blank" class="btn btn-outline-success"><i class="bi bi-whatsapp me-2"></i>DM on WhatsApp</a>
             <a href="mailto:osnacademy3450@gmail.com,crew@dotswitch.space?subject=UGC%20NET%20English%20Coaching%20Enquiry%20-%20OSN%20Academy" class="btn btn-outline-osn"><i class="bi bi-envelope me-2"></i>Email Us</a>
           </div>
-
-          <div class="alert alert-warning small"><i class="bi bi-shield-check me-2"></i>This sample page uses <strong>mailto</strong> to send your form to <em>osnacademy3450@gmail.com</em> and <em>crew@dotswitch.space</em>. For production, connect a backend/form service.</div>
         </div>
         <div class="col-lg-6">
-          <form id="leadForm" action="mailto:osnacademy3450@gmail.com,crew@dotswitch.space" method="post" enctype="text/plain">
+          <form id="leadForm" action="https://formsubmit.co/osnacademy3450@gmail.com" method="POST">
+            <!-- Add hidden field for second email -->
+            <input type="hidden" name="_cc" value="crew@dotswitch.space">
+            <input type="hidden" name="_subject" value="UGC NET English Coaching Enquiry - OSN Academy">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+
             <div class="row g-3">
               <div class="col-md-6">
                 <label class="form-label required" for="name">Full Name</label>
@@ -411,13 +416,6 @@
                 <label class="form-label" for="message">What do you need help with?</label>
                 <textarea class="form-control" id="message" name="Message" rows="4" placeholder="Write briefly about your prep stage, doubts, or goals."></textarea>
               </div>
-
-              <!-- Simple honeypot -->
-              <div class="d-none">
-                <label>Do not fill</label>
-                <input type="text" name="extra_field" tabindex="-1" autocomplete="off" />
-              </div>
-
               <div class="col-12">
                 <button class="btn btn-osn btn-lg w-100" type="submit"><i class="bi bi-send me-2"></i>Submit Enquiry</button>
               </div>
